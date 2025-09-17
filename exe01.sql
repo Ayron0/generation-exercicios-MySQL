@@ -12,8 +12,6 @@ CREATE TABLE tb_colaboradores(
     cargo VARCHAR(255) NOT NULL
 );
 
-SELECT * FROM tb_colaboradores;
-
 INSERT INTO tb_colaboradores(nome,  salario, idade, cargo) 
 values ("Paulo", 10000.00, 26, "Presidente");
 
@@ -34,4 +32,6 @@ SELECT * FROM tb_colaboradores;
 SELECT * FROM tb_colaboradores WHERE salario < 2000;
 SELECT * FROM tb_colaboradores WHERE salario > 2000;
 
-DROP TABLE tb_colaboradores;
+UPDATE tb_colaboradores SET salario = 2500.00, cargo = "Gerente" WHERE id = 5;
+
+SELECT * FROM tb_colaboradores;
